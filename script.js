@@ -12,16 +12,29 @@ return rps[random];
 let computerSelection = computerPlay();
 
 function playGame(playerSelection, computerSelection) {
-if (playerSelection === computerSelection) {
-  console.log("It's a tie");
-} else if (
+  if (playerSelection === computerSelection) {
+    console.log("It's a tie");
+
+} else if {
+  (
   (computerSelection === 'rock' && playerSelection === 'scissors') ||
-  (computerSelection === 'paper' && playerSelection === 'rock') ||
-  (computerSelection === 'scissors' && playerSelection === 'paper')
-){
- console.log ("You loose!") 
+  //(computerSelection === 'scissors' && playerSelection === 'paper') ||
+  //(computerSelection === 'paper' && playerSelection === 'rock')) {
+  
+//){ console.log ("You loose!) ${computerSelection} beats ${playerSelection}.");
+//} else {
+//  console.log("You win! ${playerSelection"} beats ${computerSelection}.);
+// }
+//}
 
-}
 
-playGame(playerSelection, computerSelection);
-playerSelection
+
+//playGame(playerSelection, computerSelection);
+//playerSelection
+
+
+// if ()
+
+//(playerSelection === 'rock' && computerSelection === (scissors') ||
+//(playerSelection === 'scissors' && computerSelection === 'paper') ||
+//(playerSelection === 'paper' && computerSelection ==='rock')
