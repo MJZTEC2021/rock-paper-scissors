@@ -8,9 +8,8 @@ function computerPlay() {
 
   let random = Math.floor(Math.random() * rps.length);
 
-  return rps [random];
+  return rps[random];
 }
-
 
 //let computerSelection = computerPlay();
 let computerSelection = computerPlay();
@@ -19,44 +18,15 @@ function playGame(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     console.log("It's a tie");
   } else if (
+    //The 4 lines below relate to the computer selection winning, using the and/or, along with the console showing the result.
     (computerSelection === 'rock' && playerSelection === 'scissors') ||
     (computerSelection === 'scissors' && playerSelection === 'paper') ||
-    (computerSelection === 'paper' && playerSection === 'rock')
-  )
+    (computerSelection === 'paper' && playerSelection === 'rock')
+  ) {
+    console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+  } else {
+    // relate to the player selection winning, using the and/or, along with the console showing the result.
+    console.log(`You win! ${playerSelection} beats ${computerSelection}`);
+  }
 }
-
-//function computerPlay() {
- // const rps = ['rock', 'paper', 'scissors'];
-//let random = Math.floor(Math.random() * rps.length);
-//return rps[random];
-//}
-
-
-
-//function playGame(playerSelection, computerSelection) {
- // if (playerSelection === computerSelection) {
-   // console.log("It's a tie");
-
-  //else (computerSelection > playerSelection)
-  //(
-  //(computerSelection === 'rock' && playerSelection === 'scissors') ||
-  //(computerSelection === 'scissors' && playerSelection === 'paper') ||
-  //(computerSelection === 'paper' && playerSelection === 'rock')) 
-  
-//console.log ("You loose!");
-//} else if {
-//console.log("You win! $(playerSelection"); beats $(computerSelection));
-//}
-//}
-
-
-
-//playGame(playerSelection, computerSelection);
-//playerSelection
-
-
-// if ()
-
-//(playerSelection === 'rock' && computerSelection === (scissors') ||
-//(playerSelection === 'scissors' && computerSelection === 'paper') ||
-//(playerSelection === 'paper' && computerSelection ==='rock')
+playGame(playerSelection, computerSelection);
