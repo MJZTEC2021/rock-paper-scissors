@@ -3,5 +3,5 @@ const changeText = () => {
 
   p.textContent = 'rock beats scissors.';
 };
-const rock = document.querySelector('rock');
+const button = document.querySelector('rock');
 button.onclick = changeText;
