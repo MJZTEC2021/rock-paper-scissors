@@ -31,3 +31,12 @@ function playGame(playerSelection, computerSelection) {
   }
 }
 playGame(playerSelection, computerSelection);
+
+
+
+
+
+
+
+
+
