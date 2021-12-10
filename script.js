@@ -16,27 +16,44 @@ function computerPlay() {
 let computerSelection = computerPlay();
 
 function playGame(playerSelection, computerSelection) {
+  let result;
   if (playerSelection === computerSelection) {
-    console.log("It's a tie");
+    //console.log("It's a tie");
+    result = `Computer chose ${computerSelection}.<br> It's a tie!`;
   } else if (
     //The 4 lines below relate to the computer selection winning, using the and/or, along with the console showing the result.
     (computerSelection === 'rock' && playerSelection === 'scissors') ||
     (computerSelection === 'scissors' && playerSelection === 'paper') ||
     (computerSelection === 'paper' && playerSelection === 'rock')
   ) {
-    console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+    //console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+    result = `Computer chose ${computerSelection}.<br> You lose! ${computerSelection} beats ${playerSelection}.`;
   } else {
     // relate to the player selection winning, using the and/or, along with the console showing the result.
-    console.log(`You win! ${playerSelection} beats ${computerSelection}`);
+    //console.log(`You win! ${playerSelection} beats ${computerSelection}`);
+    result = `Computer chose ${computerSelection}.<br> You win! ${playerSelection} beats ${computerSeletion}.`;
   }
+  document.getElementByID('result').innerHTML = result;
 }
-playGame(playerSelection, computerSelection);
+const buttons = document.querySelectorAll('input');
 
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', function () {
+    playGame(buttons[i].value, computerSelection);
+  });
+}
+//playGame(playerSelection, computerSelection);
 
+//const p = document.querySelector('p');
+//const button = document.querySelector('button');
 
+//const changeText = () => {
+// p.textContent = 'Will I change?';
+//};
 
+//const alertText = () => {
+// alert('Will I alert?');
+//};
 
-
-
-
-
+//button.addEventListener('click', changeText);
+//button.addEventListener('click', alertText);
