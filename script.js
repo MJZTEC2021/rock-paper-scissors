@@ -1,8 +1,8 @@
 //let playerSelection = prompt('Type your choice of rock, paper or scissors.');
 
-let playerSelection = 'rock';
+//let playerSelection = 'rock';
 
-playerSelection = playerSelection.toLowerCase();
+//playerSelection = playerSelection.toLowerCase();
 
 function computerPlay() {
   const rps = ['rock', 'paper', 'scissors'];
@@ -35,6 +35,7 @@ function playGame(playerSelection, computerSelection) {
   }
   document.getElementByID('result').innerHTML = result;
 }
+
 const buttons = document.querySelectorAll('input');
 
 for (let i = 0; i < buttons.length; i++) {
@@ -47,13 +48,13 @@ for (let i = 0; i < buttons.length; i++) {
 //const p = document.querySelector('p');
 //const button = document.querySelector('button');
 
-//const changeText = () => {
-// p.textContent = 'Will I change?';
+//const rockText = () => {
+//p.textContent = ('rock');
 //};
 
-//const alertText = () => {
-// alert('Will I alert?');
+//const paperText = () => {
+//alert('paper');
 //};
 
-//button.addEventListener('click', changeText);
-//button.addEventListener('click', alertText);
+//button.addEventListener('click', rockText);
+//button.addEventListener('click', paperText);
