@@ -19,7 +19,7 @@ function playGame(playerSelection, computerSelection) {
   let result;
   if (playerSelection === computerSelection) {
     //console.log("It's a tie");
-    result = `Computer chose ${computerSelection}.<br> It's a tie!`;
+    result = `computer chose ${computerSelection}.<br> It's a tie! ${playerSelection} ties ${computerSelection}.`;
   } else if (
     //The 4 lines below relate to the computer selection winning, using the and/or, along with the console showing the result.
     (computerSelection === 'rock' && playerSelection === 'scissors') ||
@@ -27,13 +27,13 @@ function playGame(playerSelection, computerSelection) {
     (computerSelection === 'paper' && playerSelection === 'rock')
   ) {
     //console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
-    result = `Computer chose ${computerSelection}.<br> You lose! ${computerSelection} beats ${playerSelection}.`;
+    result = `computer chose ${computerSelection}.<br> You lose! ${computerSelection} beats ${playerSelection}.`;
   } else {
     // relate to the player selection winning, using the and/or, along with the console showing the result.
     //console.log(`You win! ${playerSelection} beats ${computerSelection}`);
-    result = `Computer chose ${computerSelection}.<br> You win! ${playerSelection} beats ${computerSeletion}.`;
+    result = `computer chose ${computerSelection}.<br> You win! ${playerSelection} beats ${computerSeletion}.`;
   }
-  document.getElementByID('result').innerHTML = result;
+  document.getElementId('result').innerHTML = result;
 }
 
 const buttons = document.querySelectorAll('input');
@@ -58,3 +58,4 @@ for (let i = 0; i < buttons.length; i++) {
 
 //button.addEventListener('click', rockText);
 //button.addEventListener('click', paperText);
+//button.addEventListener ('click', scissor);
