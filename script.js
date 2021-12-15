@@ -6,11 +6,12 @@
 
 function computerPlay() {
   const rps = ['rock', 'paper', 'scissors'];
-
+  const computerSelection = computerPlay;
   let random = Math.floor(Math.random() * rps.length);
 
   return rps[random];
 }
+
 
 //let computerSelection = computerPlay();
 let computerSelection = computerPlay();
@@ -20,7 +21,8 @@ function playGame(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     //console.log("It's a tie");
     result = `computer chose ${computerSelection}.<br> It's a tie! ${playerSelection} ties ${computerSelection}.`;
-  } else if (
+  } 
+  else if (
     //The 4 lines below relate to the computer selection winning, using the and/or, along with the console showing the result.
     (computerSelection === 'rock' && playerSelection === 'scissors') ||
     (computerSelection === 'scissors' && playerSelection === 'paper') ||
@@ -28,14 +30,16 @@ function playGame(playerSelection, computerSelection) {
   ) {
     //console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
     result = `computer chose ${computerSelection}.<br> You lose! ${computerSelection} beats ${playerSelection}.`;
-  } else {
+  } 
+  else {
     // relate to the player selection winning, using the and/or, along with the console showing the result.
     //console.log(`You win! ${playerSelection} beats ${computerSelection}`);
-    result = `computer chose ${computerSelection}.<br> You win! ${playerSelection} beats ${computerSeletion}.`;
-  }
-  document.getElementId('result').innerHTML = result;
-}
+    result = `computer chose ${computerSelection}.<br> You win! ${playerSelection} beats ${computerSeletion}.`,
 
+       
+  }
+}
+document.getElementId('result').innerHTML = result;
 const buttons = document.querySelectorAll('input');
 
 for (let i = 0; i < buttons.length; i++) {
