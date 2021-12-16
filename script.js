@@ -35,7 +35,7 @@ function playGame(playerSelection, computerSelection) {
     //console.log(`You win! ${playerSelection} beats ${computerSelection}`);
     result = `computer chose ${computerSelection}.<br> You win! ${playerSelection} beats ${computerSeletion}.`
 
-    
+
   }
   document.getElementById('result').innerHTML = result
 }
