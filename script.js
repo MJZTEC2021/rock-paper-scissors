@@ -21,7 +21,7 @@ function playGame(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     //console.log("It's a tie");
     result = `computer chose ${computerSelection}.<br> It's a tie! ${playerSelection} ties ${computerSelection}.`;
-  } else if (
+  }  else if (
     //The 4 lines below relate to the computer selection winning, using the and/or, along with the console showing the result.
     computerSelection === 'rock' && playerSelection === 'scissors' ||
     computerSelection === 'scissors' && playerSelection === 'paper' ||
@@ -33,9 +33,9 @@ function playGame(playerSelection, computerSelection) {
   else {
     // relate to the player selection winning, using the and/or, along with the console showing the result.
     //console.log(`You win! ${playerSelection} beats ${computerSelection}`);
-    result = `computer chose ${computerSelection}.<br> You win! ${playerSelection} beats ${computerSeletion}.`
+    result = `computer chose ${computerSelection}.<br> You win! ${playerSelection} beats ${computerSelection}.`
 
-
+       
   }
   document.getElementById('result').innerHTML = result
 }
