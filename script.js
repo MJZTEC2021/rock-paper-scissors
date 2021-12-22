@@ -59,7 +59,7 @@ for (let i = 0; i < buttons.length; i++) {
 //const paperText = () => {
 //alert('paper');
 //};
-
+//extra notes
 //button.addEventListener('click', rockText);
 //button.addEventListener('click', paperText);
 //button.addEventListener ('click', scissor);
